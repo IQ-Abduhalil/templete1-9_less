@@ -1,0 +1,71 @@
+@use "../variables";
+@use "../mixins";
+
+.about {
+  margin-top: 66px;
+  margin-bottom: 100px;
+  &__title {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    color: variables.$titlec;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: variables.$textc;
+    margin-bottom: 45px;
+  }
+
+  &__persons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    max-width: 345px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  &__info {
+    margin-left: 35px;
+  }
+
+  &__name {
+    color: variables.$titlec;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__job {
+    color: variables.$textc;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  &__email {
+    color: variables.$btnc;
+  }
+
+  &__img {
+    margin-right: -50px;
+  }
+}

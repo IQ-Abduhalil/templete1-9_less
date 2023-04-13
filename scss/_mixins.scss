@@ -1,0 +1,67 @@
+@use "./variables";
+
+@mixin sign-btn($b-color: false, $color: false) {
+  padding: 5px 13px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  border: 1px solid variables.$gray;
+  border-radius: 4px;
+
+  @if $b-color {
+    background-color: $b-color;
+  } @else {
+    background-color: variables.$gray;
+  }
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: variables.$titlec;
+  }
+}
+
+@mixin start-btn($bg-color: false) {
+  border: none;
+  padding: 15px 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  color: variables.$white;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+
+  @if $bg-color {
+    background-color: $bg-color;
+  } @else {
+    background-color: variables.$yellow;
+  }
+}
+
+@mixin btns($bg-color: false) {
+  border: 1px solid variables.$titlec;
+  padding: 0px 14px;
+  border-radius: 90px;
+  cursor: pointer;
+  text-align: center;
+  color: variables.$textc;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 28px;
+
+  @if $bg-color {
+    background-color: $bg-color;
+  } @else {
+    background-color: variables.$gray;
+  }
+}

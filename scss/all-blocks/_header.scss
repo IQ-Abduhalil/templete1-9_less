@@ -1,0 +1,60 @@
+@use "../variables";
+@use "../mixins";
+
+.header {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    gap: 17px;
+  }
+
+  &__nav {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    color: variables.$textc;
+    padding: 24px 0;
+  }
+
+  &__nav:hover {
+    color: variables.$yellow;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__btn {
+    @include mixins.sign-btn();
+  }
+
+  &__btn:active {
+    @include mixins.sign-btn(
+      $b-color: variables.$yellow,
+      $color: variables.$bgc
+    );
+  }
+
+  &__btn2 {
+    @include mixins.sign-btn(
+      $b-color: variables.$yellow,
+      $color: variables.$white
+    );
+  }
+
+  &__btn2:active {
+    @include mixins.sign-btn(
+      $b-color: variables.$textc,
+      $color: variables.$white
+    );
+  }
+}

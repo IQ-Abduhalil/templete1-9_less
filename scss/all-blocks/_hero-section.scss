@@ -1,0 +1,67 @@
+@use "../variables";
+@use "../mixins";
+
+.hero {
+  background-image: url(../../images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 460px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    text-align: center;
+    color: variables.$titlec;
+    margin-bottom: 70px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__card {
+    max-width: 262px;
+  }
+
+  &__card-title {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: variables.$titlec;
+    margin-top: 30px;
+  }
+
+  &__card-text {
+    max-width: 262px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: variables.$textc;
+    margin-top: 16px;
+  }
+
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+    @include mixins.start-btn($bg-color: variables.$red);
+    text-align: center;
+    margin-bottom: 90px;
+  }
+}

@@ -1,0 +1,94 @@
+@use "../variables";
+@use "../mixins";
+
+.market {
+  margin-top: 30px;
+  &__title {
+    color: variables.$titlec;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    color: variables.$textc;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 30px;
+  }
+
+  &__btn:nth-child(1) {
+    @include mixins.btns($bg-color: variables.$yellow);
+  }
+
+  &__btn {
+    @include mixins.btns();
+  }
+
+  &__boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__box-title {
+    color: variables.$titlec;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: 24px;
+    margin-bottom: 29px;
+    max-width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__box {
+    max-width: 377px;
+    border-radius: 8px;
+  }
+
+  &__box-btns {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 26px;
+    margin-left: 32px;
+  }
+
+  &__box-btn {
+    @include mixins.btns();
+  }
+
+  &__box-btn:hover {
+    background-color: variables.$yellow;
+  }
+
+  &__box1 {
+    max-width: 887px;
+  }
+
+  &__box1-title {
+    max-width: 719px;
+    color: variables.$titlec;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    margin: 24px auto;
+  }
+}

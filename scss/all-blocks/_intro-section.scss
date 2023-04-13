@@ -1,0 +1,57 @@
+@use "../variables";
+@use "../mixins";
+
+.intro {
+  margin-top: 30px;
+  margin-bottom: 110px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 54px;
+    color: variables.$titlec;
+    max-width: 550px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 486px;
+    color: variables.$textc;
+    margin-bottom: 45px;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+  }
+
+  &__btn {
+    @include mixins.start-btn();
+  }
+
+  &__btn:hover {
+    @include mixins.start-btn($bg-color: variables.$btnc);
+  }
+
+  &__watch {
+    display: inline-block;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$yellow;
+  }
+}

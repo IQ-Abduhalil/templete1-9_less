@@ -1,0 +1,42 @@
+@use "../variables";
+@use "../mixins";
+
+.footer {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 56px;
+    margin-bottom: 72px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__item-title {
+    color: variables.$titlec;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+
+  &__item {
+    color: variables.$textc;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    cursor: pointer;
+  }
+
+  &__item:hover {
+    color: variables.$yellow;
+  }
+}

@@ -1,0 +1,112 @@
+@use "../variables";
+@use "../mixins";
+
+.contact {
+  padding-top: 62px;
+  padding-bottom: 90px;
+  background-color: variables.$contact-bg;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: variables.$titlec;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    margin-bottom: 17px;
+  }
+
+  &__text {
+    max-width: 528px;
+    color: variables.$textc;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 33px;
+  }
+
+  &__tel {
+    color: variables.$textc;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    position: relative;
+  }
+
+  &__tel::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../../images/contact-img1.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  &__email {
+    color: variables.$textc;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 26px;
+    margin-left: 30px;
+    position: relative;
+  }
+
+  &__email::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../../images/contact-img2.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+
+  &__form {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  &__input {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    opacity: 0.7;
+  }
+
+  &__hobby {
+    padding: 10px 260px 124px 21px;
+    border: none;
+    opacity: 0.7;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    color: variables.$white;
+    border: none;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px 25px;
+    border-radius: 4px;
+    background-color: variables.$yellow;
+  }
+}
